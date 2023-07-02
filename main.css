@@ -1,0 +1,71 @@
+.jumbotron{
+    background: transparent;
+}
+
+/* --------button styles----------- */
+#choices{
+    margin: auto;
+    float: left;
+}
+#choices button{
+    background: linear-gradient(to right, #240b36, #c31432);
+    width: 180px;
+    height: 50px;
+    margin-left: 40px;
+    border: none;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 25px;
+    position: relative;
+    transition: all .6s;
+}
+#choices button:hover{
+    border-radius: 25px 0;
+}
+
+#choices button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #240b36, #c31432);
+    width: 100%;
+    height: 100%;
+    filter: blur(22px);
+    transform: scale(0.9, 0.8) translateY(20px);
+    z-index: -1;
+    opacity: 0;
+    transition: all .6s;
+}
+
+#choices button:hover::before{
+    opacity: 1;
+}
+
+/* ---------- header style ---------- */
+
+#result{
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(
+        90deg,
+        #fc87da 0%,
+        #cb94ef 36%,
+        #41e0e7 70%,
+        #28f6c2 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* --------- Video Background ------------ */
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -23;
+}
